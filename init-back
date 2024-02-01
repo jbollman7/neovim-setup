@@ -1,0 +1,70 @@
+:set number
+:set relativenumber
+:set autoindent
+:set tabstop=4
+:set shiftwidth=4
+:set smarttab
+:set softtabstop=4
+:set mouse=a
+
+"Install Vim Plug
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+call plug#begin('~/AppData/Local/nvim/plugged')
+
+Plug 'habamax/vim-gruvbit'
+" commenting text
+Plug 'tpope/vim-commentary'
+" Show indentation
+Plug 'Yggdroot/indentline'
+" Highlight yank for a second
+Plug 'machakann/vim-highlightedyank'
+
+Plug 'preservim/nerdtree'
+Plug 'm4xshen/autoclose.nvim'
+Plug 'OmniSharp/omnisharp-vim' 	"cSharp support
+Plug 'dense-analysis/ale' 	"Linting/error handling
+Plug 'sheerun/vim-polyglot'   "language pack for 100 plus languages
+Plug 'neoclide/coc.nvim', {'branch': 'release'} "Autocomplete, needed for omni,ale, polyglot
+" FuzzyFinder allows commands like :Files and easier navigation
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
+
+Plug 'tpope/vim-surround' "add braces, quotes, change html elements, etc.
+call plug#end()
+"COC
+" Go to definition
+nnoremap <F12> :call CocAction('jumpDefinition')<CR>
+
+" Go to references
+nnoremap <leader>r :call CocAction('jumpReferences')<CR>
+
+" Go to implementations
+nnoremap <leader>i :call CocAction('jumpImplementation')<CR>
+
+" Auto import
+nnoremap <leader>a :call CocAction('codeAction')<CR>
+
+"This expression seems to be responsible for coc formatting on enter
+inoremap <silent><expr> <cr> "\C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+"I this just says autocomplete with the first option if pop up menu is open.
+"If it is not open, just do a regular tab.
+inoremap <silent><expr> <TAB> coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<TAB>"
+" remap ctrl v visual block mode to ctrl+Q
+" nnoremap <C-Q> <C-V>  " ctr v still enters visual block, have no idea what
+" this does
+" FZF configuration
+" Map Ctrl=P to call :FZF
+nnoremap <C-p> :FZF<CR>
+
+set termguicolors
+colorscheme gruvbit
+
+lua << EOF
+  require("autoclose").setup({})
+EOF
+
