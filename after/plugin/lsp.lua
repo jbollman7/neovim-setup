@@ -1,5 +1,15 @@
 local lsp = require("lsp-zero")
 
+lsp.on_attach(function(client, bufnr)
+  lsp.default_keymaps({buffer = bufnr})
+end)
+
+require('mason').setup({})
+require('mason-lspconfig').setup({
+  handlers = {
+    lsp.default_setup,
+  },
+})
 local cmp = require('cmp')
 local cmp_action = require('lsp-zero').cmp_action()
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
@@ -41,8 +51,15 @@ lsp.on_attach(function(client, bufnr)
   vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
   vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end)
-require('lspconfig').tsserver.setup({})
-require('lspconfig').angularls.setup({})
+require'lspconfig'.tsserver.setup{
+    cmd = { "typescript-language-server.cmd", "--stdio" },
+    on_attach = function(client, bufnr)
+        -- Your on_attach function here
+    end,
+    -- Include other configuration settings as needed
+}
+
+
 require('lspconfig').html.setup({})
 require('lspconfig').csharp_ls.setup({})
 

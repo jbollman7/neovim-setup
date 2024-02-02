@@ -22,23 +22,18 @@ require("lazy").setup({
     },
     "tpope/vim-fugitive",
     --- Uncomment the two plugins below if you want to manage the language servers from neovim
---     {'williamboman/mason.nvim'},
---     {'williamboman/mason-lspconfig.nvim'},
     -- LSP Support
-        'VonHeikemen/lsp-zero.nvim',
-      {
-        'neovim/nvim-lspconfig',
-        dependencies = {
-          {'hrsh7th/cmp-nvim-lsp'},
-        }
-      },
+    'VonHeikemen/lsp-zero.nvim',
+    {'neovim/nvim-lspconfig'},
+    
+    {'williamboman/mason.nvim'},
+    {'williamboman/mason-lspconfig.nvim'},
+    'neovim/nvim-lspconfig',
+    {'hrsh7th/cmp-nvim-lsp'},
+    {'hrsh7th/nvim-cmp'},
       -- Autocompletion
-      {
-        'hrsh7th/nvim-cmp',
-        dependencies = {
-          {'L3MON4D3/LuaSnip'}
-        },
-      },
+     {'L3MON4D3/LuaSnip'}
+
 }, {})
 --plenary is needed for telescope
 -- telescope is a fuzzy finder with preview
