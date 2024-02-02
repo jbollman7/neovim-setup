@@ -1,12 +1,8 @@
-require("mason").setup()
-require("mason-lspconfig").setup({
-    ensure_installed = {'tsserver', 'angularls', 'csharp_ls', 'lua_ls'},
-    automatic_installation = true
-})
 local lsp = require("lsp-zero")
 
 local cmp = require('cmp')
 local cmp_action = require('lsp-zero').cmp_action()
+local cmp_select = {behavior = cmp.SelectBehavior.Select}
 
   cmp.setup({
     window = {
@@ -45,6 +41,10 @@ lsp.on_attach(function(client, bufnr)
   vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
   vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end)
+require('lspconfig').tsserver.setup({})
+require('lspconfig').angularls.setup({})
+require('lspconfig').html.setup({})
+require('lspconfig').csharp_ls.setup({})
 
 lsp.setup()
 

@@ -22,15 +22,10 @@ require("lazy").setup({
     },
     "tpope/vim-fugitive",
     --- Uncomment the two plugins below if you want to manage the language servers from neovim
-     {'williamboman/mason.nvim'},
-     {'williamboman/mason-lspconfig.nvim'},
+--     {'williamboman/mason.nvim'},
+--     {'williamboman/mason-lspconfig.nvim'},
     -- LSP Support
-      {
         'VonHeikemen/lsp-zero.nvim',
-        branch = 'v3.x',
-        lazy = true,
-        config = false,
-      },
       {
         'neovim/nvim-lspconfig',
         dependencies = {
