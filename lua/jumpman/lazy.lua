@@ -32,8 +32,14 @@ require("lazy").setup({
     {'hrsh7th/cmp-nvim-lsp'},
     {'hrsh7th/nvim-cmp'},
       -- Autocompletion
-     {'L3MON4D3/LuaSnip'}
-
+     {'L3MON4D3/LuaSnip'},
+    -- nice things to have
+    -- commenting text
+    'tpope/vim-commentary',
+   -- Show indentation
+   'Yggdroot/indentline',
+   --Highlight yank for a second
+   'machakann/vim-highlightedyank'
 }, {})
 --plenary is needed for telescope
 -- telescope is a fuzzy finder with preview
