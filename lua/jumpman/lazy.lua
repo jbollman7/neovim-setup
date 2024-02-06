@@ -39,7 +39,9 @@ require("lazy").setup({
    -- Show indentation
    'Yggdroot/indentline',
    --Highlight yank for a second
-   'machakann/vim-highlightedyank'
+   'machakann/vim-highlightedyank',
+   -- Auto close braces, quites, etc'
+   'windwp/nvim-autopairs'
 }, {})
 --plenary is needed for telescope
 -- telescope is a fuzzy finder with preview
