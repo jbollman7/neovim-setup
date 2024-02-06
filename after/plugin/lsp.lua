@@ -36,7 +36,9 @@ lsp.set_preferences({
         info = 'I'
     }
 })
-
+-- On attach: rempas only exist for the current buffer that im on.
+-- If i go where theres no buffer, i can still use the commands and vim will do 
+-- best effort to vim's best jump to definition, if i have a buffer, it will use lsp
 lsp.on_attach(function(client, bufnr)
   local opts = {buffer = bufnr, remap = false}
 
@@ -62,6 +64,7 @@ require'lspconfig'.tsserver.setup{
 
 require('lspconfig').html.setup({})
 require('lspconfig').csharp_ls.setup({})
+require('lspconfig').clangd.setup({})
 
 lsp.setup()
 
