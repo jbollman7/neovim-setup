@@ -21,3 +21,7 @@ vim.keymap.set("n", "N", "Nzzzv")  -- Keeps cursor in the middle of the screeen 
 -- Allows you to copy a piece of text over another highlighted piece of text
 -- Deletes highlighted word into void register and paste the first word over it
 vim.keymap.set("x", "<leader>p", "\"_dP")
+-- Toggle buffers
+vim.api.nvim_set_keymap('n', '<Tab>', ':bnext<CR>', { silent = true })
+vim.api.nvim_set_keymap('n', '<S-Tab>', ':bprev<CR>', { silent = true })
+

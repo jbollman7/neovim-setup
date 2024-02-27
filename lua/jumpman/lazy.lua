@@ -42,6 +42,14 @@ require("lazy").setup({
     'machakann/vim-highlightedyank',
    -- Auto close braces, quites, etc'
     'windwp/nvim-autopairs',
+   -- markdown previeuse 
+    "toppair/peek.nvim",
+     event = { "VeryLazy" },
+     build = "deno task --quiet build:fast",
+    -- harpoon
+    "ThePrimeagen/harpoon",
+    branch = "harpoon2",
+    dependencies = { "nvim-lua/plenary.nvim" }
 }, {})
 --plenary is needed for telescope
 -- telescope is a fuzzy finder with preview
