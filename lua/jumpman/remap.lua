@@ -25,3 +25,11 @@ vim.keymap.set("x", "<leader>p", "\"_dP")
 vim.api.nvim_set_keymap('n', '<Tab>', ':bnext<CR>', { silent = true })
 vim.api.nvim_set_keymap('n', '<S-Tab>', ':bprev<CR>', { silent = true })
 
+
+
+
+-- Remap
+vim.api.nvim_set_keymap('n', '<C-Up>', ':resize +2<CR>', {silent = true})
+vim.api.nvim_set_keymap('n', '<C-Down>', ':resize -2<CR>', {silent = true})
+vim.api.nvim_set_keymap('n', '<C-Left>', ':vertical resize -2<CR>', {silent = true})
+vim.api.nvim_set_keymap('n', '<C-Right>', ':vertical resize +2<CR>', {silent = true})

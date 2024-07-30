@@ -37,7 +37,7 @@ require("lazy").setup({
     -- commenting text
     'tpope/vim-commentary',
    -- Show indentation
-    'Yggdroot/indentline',
+    --'Yggdroot/indentline',
    --Highlight yank for a second
     'machakann/vim-highlightedyank',
    -- Auto close braces, quites, etc'
@@ -49,7 +49,7 @@ require("lazy").setup({
     -- harpoon
     "ThePrimeagen/harpoon",
     branch = "harpoon2",
-    dependencies = { "nvim-lua/plenary.nvim" }
+    dependencies = { "nvim-lua/plenary.nvim" },
 }, {})
 --plenary is needed for telescope
 -- telescope is a fuzzy finder with preview
