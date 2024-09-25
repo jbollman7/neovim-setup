@@ -1,5 +1,6 @@
 return {
   'shaunsingh/nord.nvim',
+  --"folke/tokyonight.nvim",
   lazy = false,
   priority = 1000,
   config = function()
@@ -13,6 +14,7 @@ return {
 
     -- Load the colorscheme
     require('nord').set()
+    --require("tokyonight.colors").setup() -- pass in any of the config options as explained above
 
     -- Toggle background transparency
     local bg_transparent = true

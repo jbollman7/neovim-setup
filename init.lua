@@ -14,17 +14,18 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Set up plugins
 require('lazy').setup {
-  require 'plugins.harpoon',
-  require 'plugins.lualine',
-  require 'plugins.treesitter',
-  require 'plugins.telescope',
-  require 'plugins.lsp',
-  require 'plugins.autocompletion',
-  require 'plugins.gitsigns',
   require 'plugins.alpha',
-  require 'plugins.indent-blankline',
-  require 'plugins.misc',
+  require 'plugins.autocompletion',
+  require 'plugins.colortheme',
   require 'plugins.comment',
+  require 'plugins.gitsigns',
+  require 'plugins.harpoon',
+  require 'plugins.indent-blankline',
+  require 'plugins.lsp',
+  require 'plugins.lualine',
+  require 'plugins.misc',
+  require 'plugins.telescope',
+  require 'plugins.treesitter',
 }
 
 -- The line beneath this is called `modeline`. See `:help modeline`

@@ -7,6 +7,7 @@ return {
   {
     -- Powerful Git integration for Vim
     'tpope/vim-fugitive',
+    vim.keymap.set('n', "<leader>gs", vim.cmd.Git);
   },
   {
     -- Hints keybinds
