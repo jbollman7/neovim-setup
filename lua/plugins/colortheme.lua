@@ -35,46 +35,19 @@ return {
   priority = 1000,
   config = function()
     local config = {
-      style = "moon",
-      light_style = "day",
-      transparent = false,
       terminal_colors = true,
-      styles = {
-        comments = { italic = true },
-        keywords = { italic = true },
-        functions = {},
-        variables = {},
-        sidebars = "dark",
-        floats = "dark",
-      },
-      day_brightness = 0.3,
-      dim_inactive = false,
+      dim_inactive = true,
       lualine_bold = false,
-      on_colors = function(colors) end,
-      on_highlights = function(highlights, colors) end,
       cache = true,
-      plugins = {
-        all = package.loaded.lazy == nil,
-        auto = true,
-      },
     }
-
 
     require("tokyonight").setup(config)
     vim.cmd [[colorscheme tokyonight]]
-
-    local function set_transparent_background()
-      vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-      vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-    end
-
-    set_transparent_background()
 
     local toggle_transparency = function()
       config.transparent = not config.transparent
       require("tokyonight").setup(config)
       vim.cmd [[colorscheme tokyonight]]
-      set_transparent_background()
     end
 
     vim.keymap.set('n', '<leader>bg', toggle_transparency, { noremap = true, silent = true })
