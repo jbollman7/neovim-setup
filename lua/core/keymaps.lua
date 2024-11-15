@@ -30,3 +30,6 @@ vim.api.nvim_set_keymap('n', '<C-Up>', ':resize +2<CR>', { silent = true })
 vim.api.nvim_set_keymap('n', '<C-Down>', ':resize -2<CR>', { silent = true })
 vim.api.nvim_set_keymap('n', '<C-Left>', ':vertical resize -2<CR>', { silent = true })
 vim.api.nvim_set_keymap('n', '<C-Right>', ':vertical resize +2<CR>', { silent = true })
+-- terminal remap
+vim.api.nvim_set_keymap('t', '<C-t>', '<C-\\><C-n>', { noremap = true, silent = true })
+

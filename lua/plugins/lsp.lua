@@ -163,6 +163,7 @@ return {
       --
       -- But for many setups, the LSP (`tsserver`) will work just fine
       ts_ls = {},
+      csharp_ls = {},
       html = { filetypes = { 'html', 'twig', 'hbs' } },
       cssls = {},
       dockerls = {},
