@@ -14,7 +14,6 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Set up plugins
 require('lazy').setup {
-  --require 'plugins.alpha',
   require 'plugins.autocompletion',
   require 'plugins.colortheme',
   require 'plugins.comment',
