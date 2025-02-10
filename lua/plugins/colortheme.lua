@@ -44,16 +44,14 @@ return {
     require("tokyonight").setup(config)
 
     vim.cmd [[colorscheme tokyonight]]
-    vim.cmd("highlight LineNr guifg=#5081c0")
-    vim.cmd("highlight CursorLineNr guifg=#FFba00")
+     vim.cmd("highlight LineNr guifg=#5081c0")
 
     local toggle_transparency = function()
       config.transparent = not config.transparent
       require("tokyonight").setup(config)
       vim.cmd [[colorscheme tokyonight]]
       -- Reapply highlights after toggling transparency
-      vim.cmd("highlight LineNr guifg=#5081c0")
-      vim.cmd("highlight CursorLineNr guifg=#FFba00")
+       vim.cmd("highlight LineNr guifg=#5081c0")
     end
 
     vim.keymap.set('n', '<leader>bg', toggle_transparency, { noremap = true, silent = true })

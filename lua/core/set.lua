@@ -29,3 +29,5 @@ vim.opt.updatetime = 50
 
 vim.g.mapleader = ' ' --Map leader button from back slash to space
 --vim.opt.colorcolumn = "80"
+--
+vim.opt.cursorline = true
