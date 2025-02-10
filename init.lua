@@ -19,7 +19,6 @@ require('lazy').setup {
   require 'plugins.comment',
   require 'plugins.gitsigns',
   require 'plugins.harpoon',
-  --require 'plugins.indent-blankline',
   require 'plugins.lsp',
   require 'plugins.lualine',
   require 'plugins.misc',
