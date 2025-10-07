@@ -1,5 +1,13 @@
 return {
   'ThePrimeagen/harpoon',
+  keys = {
+    { '<leader>a', desc = 'Harpoon add file' },
+    { '<C-e>', desc = 'Harpoon menu' },
+    { '<C-h>', desc = 'Harpoon file 1' },
+    { '<C-j>', desc = 'Harpoon file 2' },
+    { '<C-k>', desc = 'Harpoon file 3' },
+    { '<C-l>', desc = 'Harpoon file 4' },
+  },
   dependencies = { 'nvim-lua/plenary.nvim' },
   config = function()
     -- Load the necessary harpoon modules

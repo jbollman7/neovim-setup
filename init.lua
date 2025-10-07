@@ -13,10 +13,11 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- Set up plugins
-require('lazy').setup {
+require('lazy').setup({
   require 'plugins.autocompletion',
   require 'plugins.colortheme',
   require 'plugins.comment',
+  require 'plugins.copilot',
   require 'plugins.gitsigns',
   require 'plugins.harpoon',
   require 'plugins.lsp',
@@ -24,7 +25,22 @@ require('lazy').setup {
   require 'plugins.misc',
   require 'plugins.telescope',
   require 'plugins.treesitter',
-}
+}, {
+  performance = {
+    rtp = {
+      disabled_plugins = {
+        'gzip',
+        'matchit',
+        'matchparen',
+        'netrwPlugin',
+        'tarPlugin',
+        'tohtml',
+        'tutor',
+        'zipPlugin',
+      },
+    },
+  },
+})
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

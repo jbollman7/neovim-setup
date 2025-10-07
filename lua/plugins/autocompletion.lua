@@ -1,4 +1,7 @@
 return { -- Autocompletion
+  {
+    "github/copilot.vim"
+  },
   'hrsh7th/nvim-cmp',
   dependencies = {
     -- Snippet Engine & its associated nvim-cmp source
@@ -66,6 +69,7 @@ return { -- Autocompletion
       Event = '',
       Operator = '󰆕',
       TypeParameter = '󰊄',
+      Copilot = '',
     }
     cmp.setup {
       snippet = {
@@ -152,6 +156,7 @@ return { -- Autocompletion
           -- set group index to 0 to skip loading LuaLS completions as lazydev recommends it
           group_index = 0,
         },
+        { name = 'copilot' },
         { name = 'nvim_lsp' },
         { name = 'luasnip' },
         { name = 'buffer' },
@@ -163,6 +168,7 @@ return { -- Autocompletion
           vim_item.kind = string.format('%s', kind_icons[vim_item.kind])
           vim_item.menu = ({
             nvim_lsp = '[LSP]',
+            copilot = '[Copilot]',
             luasnip = '[Snippet]',
             buffer = '[Buffer]',
             path = '[Path]',

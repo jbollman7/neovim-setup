@@ -1,6 +1,14 @@
 -- Easily comment visual regions/lines
 return {
   'numToStr/Comment.nvim',
+  keys = {
+    { '<C-_>', mode = 'n', desc = 'Toggle comment' },
+    { '<C-c>', mode = 'n', desc = 'Toggle comment' },
+    { '<C-/>', mode = 'n', desc = 'Toggle comment' },
+    { '<C-_>', mode = 'v', desc = 'Toggle comment' },
+    { '<C-c>', mode = 'v', desc = 'Toggle comment' },
+    { '<C-/>', mode = 'v', desc = 'Toggle comment' },
+  },
   opts = {},
   config = function()
     local opts = { noremap = true, silent = true }

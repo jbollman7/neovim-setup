@@ -1,0 +1,198 @@
+--- Startup times for process: Primary (or UI client) ---
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.004  000.004: --- NVIM STARTING ---
+000.040  000.036: event init
+000.150  000.110: early init
+014.265  014.115: locale set
+014.306  000.040: init first window
+014.978  000.672: inits 1
+015.341  000.363: window checked
+015.351  000.010: parsing arguments
+016.511  000.372  000.372: require('vim.shared')
+017.164  000.173  000.173: require('vim.inspect')
+017.428  000.245  000.245: require('vim._options')
+017.432  000.915  000.497: require('vim._editor')
+017.435  001.388  000.100: require('vim._init_packages')
+017.449  000.711: init lua interpreter
+026.769  009.320: nvim_ui_attach
+027.028  000.259: nvim_set_client_info
+027.032  000.004: --- NVIM STARTED ---
+
+--- Startup times for process: Embedded ---
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.006  000.006: --- NVIM STARTING ---
+000.036  000.030: event init
+000.169  000.134: early init
+015.144  014.974: locale set
+015.179  000.035: init first window
+015.698  000.519: inits 1
+015.812  000.114: window checked
+015.830  000.018: parsing arguments
+016.921  000.370  000.370: require('vim.shared')
+017.567  000.172  000.172: require('vim.inspect')
+017.826  000.237  000.237: require('vim._options')
+017.830  000.903  000.494: require('vim._editor')
+017.834  001.367  000.093: require('vim._init_packages')
+017.845  000.648: init lua interpreter
+018.277  000.432: expanding arguments
+018.296  000.019: inits 2
+018.560  000.264: init highlight
+018.562  000.002: waiting for UI
+018.670  000.108: done waiting for UI
+018.676  000.006: clear screen
+019.131  000.033  000.033: require('vim.keymap')
+019.683  000.141  000.141: sourcing nvim_exec2()
+020.811  000.780  000.780: require('vim.termcap')
+020.917  000.089  000.089: require('vim.text')
+029.666  010.987  009.944: require('vim._defaults')
+029.675  000.013: init default mappings & autocommands
+029.944  000.089  000.089: sourcing C:\Program Files\Neovim\share\nvim\runtime\ftplugin.vim
+030.168  000.053  000.053: sourcing C:\Program Files\Neovim\share\nvim\runtime\indent.vim
+030.852  000.331  000.331: require('core.set')
+031.080  000.222  000.222: require('core.keymaps')
+031.957  000.785  000.785: require('lazy')
+032.199  000.236  000.236: require('plugins.autocompletion')
+032.344  000.141  000.141: require('plugins.colortheme')
+032.489  000.140  000.140: require('plugins.comment')
+032.629  000.135  000.135: require('plugins.copilot')
+032.777  000.143  000.143: require('plugins.gitsigns')
+032.946  000.165  000.165: require('plugins.harpoon')
+033.227  000.277  000.277: require('plugins.lsp')
+033.419  000.187  000.187: require('plugins.lualine')
+033.561  000.137  000.137: require('plugins.misc')
+033.708  000.143  000.143: require('plugins.telescope')
+033.828  000.116  000.116: require('plugins.treesitter')
+033.856  000.014  000.014: require('ffi')
+034.350  000.284  000.284: require('vim.fs')
+034.583  000.227  000.227: require('vim.uri')
+034.599  000.740  000.229: require('vim.loader')
+035.021  000.325  000.325: require('lazy.stats')
+035.426  000.226  000.226: require('lazy.core.util')
+035.668  000.236  000.236: require('lazy.core.config')
+036.114  000.238  000.238: require('lazy.core.handler')
+036.723  000.217  000.217: require('lazy.pkg')
+036.730  000.415  000.199: require('lazy.core.meta')
+036.742  000.623  000.207: require('lazy.core.plugin')
+036.752  001.080  000.220: require('lazy.core.loader')
+037.735  000.286  000.286: require('lazy.core.fragments')
+042.753  000.337  000.337: require('lazy.core.handler.keys')
+043.359  000.294  000.294: require('lazy.core.handler.event')
+043.366  000.603  000.308: require('lazy.core.handler.ft')
+043.554  000.184  000.184: require('lazy.core.handler.cmd')
+044.695  000.416  000.416: sourcing nvim_exec2() called at C:\Program Files\Neovim\share/nvim/runtime/filetype.lua:0
+044.702  000.564  000.148: sourcing C:\Program Files\Neovim\share/nvim/runtime/filetype.lua
+044.716  000.731  000.167: sourcing nvim_exec2() called at C:\Users\joseph.bollman\AppData\Local\nvim\init.lua:0
+044.854  000.003  000.003: sourcing nvim_exec2() called at C:\Users\joseph.bollman\AppData\Local\nvim\init.lua:0
+044.879  000.001  000.001: sourcing nvim_exec2() called at C:\Users\joseph.bollman\AppData\Local\nvim\init.lua:0
+045.962  000.182  000.182: require('tokyonight.config')
+045.969  001.085  000.903: require('tokyonight')
+051.637  000.148  000.148: require('tokyonight.util')
+051.643  000.317  000.169: require('tokyonight.theme')
+051.932  000.180  000.180: require('tokyonight.colors')
+052.401  000.175  000.175: require('tokyonight.hsluv')
+052.828  000.304  000.304: require('tokyonight.groups')
+053.739  002.572  001.596: sourcing C:\Users\joseph.bollman\AppData\Local\nvim-data\lazy\tokyonight.nvim\colors\tokyonight.lua
+053.769  007.768  005.196: sourcing nvim_exec2() called at C:\Users\joseph.bollman\AppData\Local\nvim\init.lua:0
+053.781  000.005  000.005: sourcing nvim_exec2() called at C:\Users\joseph.bollman\AppData\Local\nvim\init.lua:0
+054.418  000.351  000.351: sourcing C:/Users/joseph.bollman/AppData/Local/nvim-data/lazy/copilot.vim/plugin/copilot.vim
+054.431  000.490  000.139: sourcing nvim_exec2() called at C:\Users\joseph.bollman\AppData\Local\nvim\init.lua:0
+054.453  000.002  000.002: sourcing nvim_exec2() called at C:\Users\joseph.bollman\AppData\Local\nvim\init.lua:0
+054.479  000.001  000.001: sourcing nvim_exec2() called at C:\Users\joseph.bollman\AppData\Local\nvim\init.lua:0
+055.966  000.694  000.694: require('cmp.utils.api')
+056.307  000.170  000.170: require('cmp.types.cmp')
+056.650  000.174  000.174: require('cmp.utils.misc')
+056.667  000.355  000.180: require('cmp.types.lsp')
+056.835  000.165  000.165: require('cmp.types.vim')
+056.840  000.868  000.178: require('cmp.types')
+057.023  000.180  000.180: require('cmp.utils.highlight')
+057.345  000.157  000.157: require('cmp.utils.debug')
+057.353  000.326  000.169: require('cmp.utils.autocmd')
+057.561  000.006  000.006: sourcing nvim_exec2() called at C:/Users/joseph.bollman/AppData/Local/nvim-data/lazy/nvim-cmp/plugin/cmp.lua:0
+057.566  002.496  000.422: sourcing C:/Users/joseph.bollman/AppData/Local/nvim-data/lazy/nvim-cmp/plugin/cmp.lua
+057.584  002.623  000.126: sourcing nvim_exec2() called at C:\Users\joseph.bollman\AppData\Local\nvim\init.lua:0
+057.592  000.002  000.002: sourcing nvim_exec2() called at C:\Users\joseph.bollman\AppData\Local\nvim\init.lua:0
+057.619  000.001  000.001: sourcing nvim_exec2() called at C:\Users\joseph.bollman\AppData\Local\nvim\init.lua:0
+058.447  000.145  000.145: sourcing C:/Users/joseph.bollman/AppData/Local/nvim-data/lazy/copilot.lua/plugin/copilot.lua
+058.462  000.273  000.129: sourcing nvim_exec2() called at C:\Users\joseph.bollman\AppData\Local\nvim\init.lua:0
+058.471  000.002  000.002: sourcing nvim_exec2() called at C:\Users\joseph.bollman\AppData\Local\nvim\init.lua:0
+058.498  000.001  000.001: sourcing nvim_exec2() called at C:\Users\joseph.bollman\AppData\Local\nvim\init.lua:0
+059.798  000.211  000.211: require('copilot.logger')
+060.161  000.170  000.170: require('copilot.config.panel')
+060.345  000.177  000.177: require('copilot.config.suggestion')
+060.517  000.167  000.167: require('copilot.config.logger')
+060.692  000.170  000.170: require('copilot.config.server')
+061.051  000.190  000.190: require('copilot.nes.api')
+061.062  000.366  000.175: require('copilot.config.nes')
+061.234  000.169  000.169: require('copilot.config.root_dir')
+061.394  000.156  000.156: require('copilot.config.should_attach')
+061.399  001.595  000.222: require('copilot.config')
+061.403  002.001  000.195: require('copilot.highlight')
+062.005  000.353  000.353: require('copilot.util')
+062.522  000.204  000.204: require('copilot.lsp.binary')
+062.681  000.153  000.153: require('copilot.lsp.nodejs')
+062.686  000.676  000.318: require('copilot.lsp')
+062.989  000.144  000.144: require('copilot.client.filetypes')
+062.999  000.310  000.166: require('copilot.client.utils')
+063.474  000.155  000.155: require('copilot.status')
+063.481  000.337  000.182: require('copilot.api')
+063.484  000.482  000.146: require('copilot.client.config')
+063.489  002.083  000.262: require('copilot.client')
+063.492  004.988  000.904: require('copilot')
+063.819  000.173  000.173: require('copilot.keymaps')
+064.008  000.145  000.145: require('copilot.command')
+064.263  000.248  000.248: require('vim._system')
+106.366  000.336  000.336: require('vim.lsp.log')
+106.928  000.539  000.539: require('vim.lsp.protocol')
+107.304  000.350  000.350: require('vim.lsp.util')
+107.690  000.184  000.184: require('vim.lsp.sync')
+107.719  000.407  000.223: require('vim.lsp._changetracking')
+108.103  000.182  000.182: require('vim.lsp._transport')
+108.120  000.396  000.214: require('vim.lsp.rpc')
+108.212  002.581  000.553: require('vim.lsp')
+109.133  000.228  000.228: require('copilot.panel.utils')
+109.310  000.171  000.171: require('copilot.panel.handlers')
+109.399  000.741  000.342: require('copilot.panel')
+109.404  000.957  000.216: require('copilot.client.handlers')
+110.100  000.285  000.285: require('copilot.auth')
+110.342  000.231  000.231: require('copilot.suggestion.utils')
+110.364  000.854  000.337: require('copilot.suggestion')
+110.446  000.005  000.005: sourcing nvim_exec2() called at C:\Users\joseph.bollman\AppData\Local\nvim\init.lua:0
+110.468  000.002  000.002: sourcing nvim_exec2() called at C:\Users\joseph.bollman\AppData\Local\nvim\init.lua:0
+110.881  000.225  000.225: require('copilot_cmp.source')
+111.101  000.215  000.215: require('copilot_cmp.capabilities')
+111.108  000.635  000.196: require('copilot_cmp')
+111.595  000.161  000.161: sourcing C:\Program Files\Neovim\share/nvim/runtime/plugin/editorconfig.lua
+111.611  000.307  000.146: sourcing nvim_exec2() called at C:\Users\joseph.bollman\AppData\Local\nvim\init.lua:0
+111.932  000.182  000.182: sourcing C:\Program Files\Neovim\share/nvim/runtime/plugin/man.lua
+111.948  000.329  000.146: sourcing nvim_exec2() called at C:\Users\joseph.bollman\AppData\Local\nvim\init.lua:0
+112.232  000.148  000.148: sourcing C:\Program Files\Neovim\share/nvim/runtime/plugin/osc52.lua
+112.247  000.290  000.141: sourcing nvim_exec2() called at C:\Users\joseph.bollman\AppData\Local\nvim\init.lua:0
+112.748  000.360  000.360: sourcing C:\Program Files\Neovim\share/nvim/runtime/plugin/rplugin.vim
+112.760  000.504  000.144: sourcing nvim_exec2() called at C:\Users\joseph.bollman\AppData\Local\nvim\init.lua:0
+112.981  000.094  000.094: sourcing C:\Program Files\Neovim\share/nvim/runtime/plugin/shada.vim
+112.994  000.225  000.132: sourcing nvim_exec2() called at C:\Users\joseph.bollman\AppData\Local\nvim\init.lua:0
+113.189  000.049  000.049: sourcing C:\Program Files\Neovim\share/nvim/runtime/plugin/spellfile.vim
+113.208  000.205  000.157: sourcing nvim_exec2() called at C:\Users\joseph.bollman\AppData\Local\nvim\init.lua:0
+113.498  083.073  050.447: sourcing C:\Users\joseph.bollman\AppData\Local\nvim\init.lua
+113.538  000.647: sourcing vimrc file(s)
+113.962  000.125  000.125: sourcing C:\Program Files\Neovim\share\nvim\runtime\filetype.lua
+114.711  000.089  000.089: sourcing C:\Program Files\Neovim\share\nvim\runtime\syntax\synload.vim
+115.083  000.741  000.652: sourcing C:\Program Files\Neovim\share/nvim/runtime/syntax/syntax.vim
+115.109  000.705: inits 3
+120.763  005.654: reading ShaDa
+120.854  000.091: opening buffers
+121.776  000.282  000.282: require('vim.version')
+123.697  002.316  002.033: sourcing C:\Users\joseph.bollman\AppData\Local\nvim-data\lazy\copilot.vim\autoload\copilot.vim
+124.062  000.075  000.075: sourcing C:\Users\joseph.bollman\AppData\Local\nvim-data\lazy\copilot.vim\autoload\copilot\util.vim
+124.397  001.152: BufEnter autocommands
+124.402  000.005: editing files in windows
+124.412  000.010: --- NVIM STARTED ---
+
