@@ -34,5 +34,5 @@ vim.api.nvim_set_keymap('n', '<C-Right>', ':vertical resize +2<CR>', { silent = 
 vim.api.nvim_set_keymap('t', '<C-t>', '<C-\\><C-n>', { noremap = true, silent = true })
 
 -- copilot
-vim.api.nvim_set_keymap('i', '<C-y>', 'copilot#Accept("<CR>")', { expr=true, noremap = true, silent = true })
-vim.g.copilot_no_tab_map = true
+--vim.api.nvim_set_keymap('i', '<C-y>', 'copilot#Accept("<CR>")', { expr=true, noremap = true, silent = true })
+--vim.g.copilot_no_tab_map = true
