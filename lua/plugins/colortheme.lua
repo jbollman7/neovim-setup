@@ -31,7 +31,6 @@
 
 return {
   "folke/tokyonight.nvim",
-  lazy = false,
   priority = 1000,
   config = function()
     local config = {
@@ -44,13 +43,13 @@ return {
     require("tokyonight").setup(config)
 
     vim.cmd [[colorscheme tokyonight]]
-    vim.cmd("highlight CursorLineNr guifg=#5081c0")  -- Set current line number color
+    --vim.cmd("highlight CursorLineNr guifg=#5081c0")  -- Set current line number color
     local toggle_transparency = function()
       config.transparent = not config.transparent
       require("tokyonight").setup(config)
       vim.cmd [[colorscheme tokyonight]]
 
-      vim.cmd("highlight CursorLineNr guifg=#5081c0")  -- Set current line number color
+     -- vim.cmd("highlight CursorLineNr guifg=#5081c0")  -- Set current line number color
       -- Reapply highlights after toggling transparency
     end
 

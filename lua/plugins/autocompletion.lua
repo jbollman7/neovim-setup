@@ -1,7 +1,7 @@
 return { -- Autocompletion
-  {
-    "github/copilot.vim"
-  },
+  -- {
+  --   "github/copilot.vim"
+  -- },
   'hrsh7th/nvim-cmp',
   dependencies = {
     -- Snippet Engine & its associated nvim-cmp source
